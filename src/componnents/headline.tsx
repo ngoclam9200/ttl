@@ -8,7 +8,7 @@ export default function Headline({ title, src, titleHeading }: { title: string; 
         <img className="w-[1.25rem]" src={src} alt="icon" />
         <div className="text-[0.875rem]">{title}</div>
       </div>
-      <h2 className=" text-[1.5rem] md:text-[2.5rem] font-bold">{titleHeading}</h2>
+      <h2 className=" text-[1.5rem] md:text-[2rem] font-bold">{titleHeading}</h2>
     </>
   );
 }

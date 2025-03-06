@@ -1,9 +1,10 @@
-import Image from "next/image";
+import Headline from "@/componnents/headline";
+import ItemCourse from "./item-course";
 
 const Course = () => {
   return (
     <>
-      <div className="bg-white rounded-2xl p-6 w-full lg:px-16">
+      {/* <div className="bg-white rounded-2xl p-6 w-full lg:px-16">
         <div className="flex items-center space-x-2 mb-4 lg:justify-center">
           <div className="flex items-center px-4 py-2 rounded-lg border border-black">
             <Image src="/icon3.png" alt="icon" width={24} height={24} />
@@ -23,7 +24,6 @@ const Course = () => {
         </div>
       </div>
       <section className="mt-12 px-6 flex flex-col lg:flex-row items-center max-w-6xl mx-auto bg-white shadow-lg rounded-xl p-6">
-        {/* Hình ảnh */}
         <div className="w-full lg:w-2/3">
           <img
             src="/course.png"
@@ -31,7 +31,6 @@ const Course = () => {
             className="rounded-lg"
           />
         </div>
-        {/* Nội dung */}
         <div className="w-full lg:w-1/3 mt-6 lg:mt-0 lg:pl-6">
           <p className="text-sm text-green-600 font-semibold">
             🌿 KHAI GIẢNG: 19H00 ngày 05 tháng...
@@ -83,9 +82,7 @@ const Course = () => {
         </div>
       </section>
 
-      {/* HITA Camp */}
       <section className="mt-12 px-6 flex flex-col-reverse md:flex-col lg:flex-row items-center max-w-6xl mx-auto bg-white shadow-lg rounded-xl p-6">
-        {/* Nội dung */}
         <div className="w-full lg:w-1/3">
           <p className="text-sm text-green-600 font-semibold">
             🌿 Khởi đầu cho một hành trình phát triển toàn diện
@@ -130,7 +127,6 @@ const Course = () => {
             Thêm vào giỏ hàng
           </button>
         </div>
-        {/* Hình ảnh */}
         <div className="w-full lg:w-2/3 mt-6 p-3 lg:mt-0 lg:pl-6">
           <img src="/course2.png" alt="HITA Camp" className="rounded-lg" />
           <div>
@@ -146,6 +142,15 @@ const Course = () => {
           Tải thêm hành trình
         </span>
         <img src="right.png" />
+      </div> */}
+      <div className="  w-full flex flex-col py-[2rem] gap-[2rem]">
+        <div className=" w-full flex flex-col items-left md:items-center md:justify-center md:gap-[1.5rem]  gap-[1rem]  mx-auto grid-container">
+          <Headline title="Bắt đầu từ hôm nay" src="icons/app.png" titleHeading="ƯƠM MẦM HIỀN TÀI" />
+        </div>
+        <div className="w-full flex flex-col items-center gap-[1.5rem] justify-center mx-auto grid-container">
+          <ItemCourse isReverse={false} src="feature/course.png" />
+          <ItemCourse isReverse={true} src="feature/course.png"  price="3.868.000đ" />
+        </div>
       </div>
     </>
   );
