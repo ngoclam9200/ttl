@@ -3,14 +3,16 @@ import React from "react";
 interface CustomArrowProps {
   onClick?: () => void;
   direction: "next" | "prev";
+  position?: string;
 }
 
-const CustomArrow = React.forwardRef<HTMLButtonElement, CustomArrowProps>(({ onClick, direction }, ref) => (
+const CustomArrow = React.forwardRef<HTMLButtonElement, CustomArrowProps>(({ onClick, direction, position = "" }, ref) => (
   <button
     ref={ref}
-    className={`absolute cursor-pointer ${
-      direction === "next" ? "right-0" : "left-0"
-    } top-1/2 bg-white rounded-full w-[3.75rem] h-[3.75rem] shadow-md z-[9999] flex items-center justify-center transform -translate-y-1/2`}
+    style={{
+      [direction === "next" ? "right" : "left"]: position || 0,
+    }}
+    className="absolute cursor-pointer top-1/2 bg-white rounded-full w-[3.75rem] h-[3.75rem] shadow-md z-[9999] flex items-center justify-center transform -translate-y-1/2"
     onClick={(e) => {
       e.stopPropagation();
       onClick && onClick();

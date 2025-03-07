@@ -28,8 +28,8 @@ export default function News() {
   };
 
   return (
-    <div className="w-full flex flex-col py-[2rem] gap-[2rem] mx-auto grid-container">
-      <div className="w-full flex flex-col items-left md:items-center md:justify-center md:gap-[1.5rem]  gap-[1rem] mx-auto grid-container">
+    <div className="w-full flex flex-col py-[2rem] py:[1rem] md:gap-[2rem] gap-[1rem] mx-auto grid-container">
+      <div className="w-full flex flex-col items-left md:items-center md:justify-center md:md:gap-[1.5rem] gap-[1rem]  gap-[1rem] mx-auto grid-container">
         <Headline title="Nơi chia sẻ kiến thức và góc nhìn" src="icons/star.svg" titleHeading="Tin tức mới cập nhật" />
       </div>
       <div className="bg-gray p-4  rounded-[1rem]">
@@ -37,7 +37,7 @@ export default function News() {
           <div className="relative     ">
             <img src="feature/bg-video.png" alt="Main News" className="w-full h-auto   object-cover" />
             <div className="absolute bottom-0 left-0 w-full h-full    flex flex-col w-full   justify-end  rounded-[2rem] " style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
-              <p className=" pl-4 p-2 text-white left-3     py-1 text-[0.75rem] md:text-[0.875rem] ">2023-06-27 14:45:18</p>
+              <p className=" pl-4 p-2 text-white left-3     py-1 text-[0.85rem] md:text-[0.875rem] ">2023-06-27 14:45:18</p>
               <p className="pl-4 p-2 text-white left-3 font-semibold text-[0.875rem] md:text-[1rem]  ">CÙNG HƠN 1000 PHỤ HUYNH ĐI TÌM PHƯƠNG PHÁP DẠY CON HIỀN TÀI</p>
             </div>
           </div>
@@ -49,7 +49,7 @@ export default function News() {
                 <li key={index} className="flex items-center space-x-3">
                   <img src="https://img.youtube.com/vi/ObPxP2WNKS8/hqdefault.jpg" alt="Thumbnail" className="w-16 h-10 rounded" />
                   <div>
-                    <p className="text-[0.75rem] md:text-[0.875rem] text-gray-500">2023-03-27 08:57:52</p>
+                    <p className="text-[0.85rem] md:text-[0.875rem] text-gray-500">2023-03-27 08:57:52</p>
                     <p className="text-[0.875rem] md:text-[1rem] font-medium">CÔNG TY CỔ PHẦN ĐÀO TẠO TÂM TRÍ LỰC THAY ĐỔI ĐỊA CHỈ TRỤ SỞ</p>
                   </div>
                 </li>

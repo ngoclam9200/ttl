@@ -3,8 +3,8 @@ export default function ItemEvent({ isTime = false, isReverse = false, src }: { 
     <div className="w-full lg:w-1/2 p-4 h-full ">
       <div className="h-full">
         <div>
-          <div className="md:text-2xl text-[1.125rem] font-bold mb-4">Chuyển giao Bản Đồ Đào Tạo Hiền Tài</div>
-          <div className="space-y-4 md:text-[0.875rem] text-[0.75rem] ">
+          <div className="md:text-2xl md:text-[1.125rem] text-[1rem] font-bold mb-4">Chuyển giao Bản Đồ Đào Tạo Hiền Tài</div>
+          <div className="space-y-4 md:text-[0.875rem] text-[0.85rem] ">
             <div className="flex items-start gap-2">
               <img src="icons/check.png" className="w-[1.25rem] h-[1.25rem] mt-1" />
               <div>Giúp con học nhẹ nhàng, hiểu và nhớ dễ dàng các môn học ở trường mỗi ngày với ứng dụng 5' Thuộc Bài.</div>
@@ -23,7 +23,7 @@ export default function ItemEvent({ isTime = false, isReverse = false, src }: { 
           </div>
         </div>
         <div className="flex items-center md:justify-start justify-center text-[1rem]  gap-2 mt-4">
-          <div className="text-blue-600 px-4 py-2 rounded cursor-pointer ">Tìm hiểu thêm</div>
+          <div className="text-[#259BD4] px-4 py-2 rounded cursor-pointer ">Tìm hiểu thêm</div>
           <img src="icons/arrow-right.png" className="w-[1.25rem] h-[1.25rem]" />
         </div>
       </div>

@@ -6,7 +6,6 @@ import "slick-carousel/slick/slick-theme.css";
 import CustomArrow from "@/componnents/custom-arrow-slider";
 
 export default function Banner() {
- 
   const [activeIndex, setActiveIndex] = useState(0);
   const images = ["/banner.png", "/banner.png", "/banner.png"];
   const settings = {
@@ -24,8 +23,7 @@ export default function Banner() {
       {
         breakpoint: 768,
         settings: {
-           arrows: false,
-          
+          arrows: false,
         },
       },
     ],
@@ -41,7 +39,7 @@ export default function Banner() {
   };
   return (
     <div className="w-full flex flex-col gap-[4rem] pb-[2rem] " style={{ backgroundImage: "url('bg-banner.png')", backgroundSize: "cover" }}>
-      <div className="banner w-full  mx-auto md:pt-[2rem]  grid-container">
+      <div className="banner w-full  mx-auto md:pt-[2rem]   grid-container">
         <Slider {...settings}>
           {images.map((src, index) => (
             <div key={index} className="relative w-full outline-none">

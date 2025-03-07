@@ -3,16 +3,16 @@ import Headline from "@/componnents/headline";
 const Application = () => {
   return (
     <>
-      <div className="  w-full flex flex-col py-[2rem] gap-[2rem]">
-        <div className=" w-full flex flex-col items-left md:items-center md:justify-center md:gap-[1.5rem]  gap-[1rem]  mx-auto grid-container">
+      <div className="  w-full flex flex-col py-[2rem] py:[1rem] md:gap-[2rem] gap-[1rem]">
+        <div className=" w-full flex flex-col items-left md:items-center md:justify-center md:md:gap-[1.5rem] gap-[1rem]  gap-[1rem]  mx-auto grid-container">
           <Headline title="Ứng dụng" src="icons/app.png" titleHeading="Ứng dụng học tập thông minh" />
         </div>
-        <div className="w-full flex flex-col items-center gap-[1.5rem] justify-center mx-auto grid-container">
+        <div className="w-full flex flex-col items-center md:gap-[1.5rem] gap-[1rem] justify-center mx-auto grid-container">
           <div className=" bg-gray flex flex-col-reverse md:flex-row bg-gray-100 p-6 rounded-lg shadow-lg gap-[1rem]">
             <div className="flex-1  ">
               <div className="flex items-center gap-[0.5rem]  ">
-                <img src="feature/product3.png" alt="5 Phút Thuộc Bài" className="w-[2rem] h-[2rem] object-cover rounded-t-lg" />{" "}
-                <h2 className="text-xl font-bold text-blue-600">5 PHÚT HỌC BÀI</h2>
+                <img src="feature/product3.png" alt="5 Phút Thuộc Bài" className="md:w-[2rem] md:h-[2rem] w-[1.5rem] h-[1.5rem]  object-cover rounded-t-lg" />{" "}
+                <h2 className="md:text-xl text-md font-bold text-[#259BD4]">5 PHÚT HỌC BÀI</h2>
               </div>
 
               <p className="text-gray-600 mt-2">
@@ -39,8 +39,8 @@ const Application = () => {
           <div className=" bg-gray flex flex-col-reverse md:flex-row bg-gray-100 p-6 rounded-lg shadow-lg gap-[1rem]">
             <div className="flex-1  ">
               <div className="flex items-center gap-[0.5rem]  ">
-                <img src="feature/product3.png" alt="5 Phút Thuộc Bài" className="w-[2rem] h-[2rem] object-cover rounded-t-lg" />{" "}
-                <h2 className="text-xl font-bold text-blue-600">5 PHÚT HỌC BÀI</h2>
+                <img src="feature/product3.png" alt="5 Phút Thuộc Bài" className="md:w-[2rem] md:h-[2rem] w-[1.5rem] h-[1.5rem]  object-cover rounded-t-lg" />{" "}
+                <h2 className="md:text-xl text-md font-bold text-[#259BD4]">5 PHÚT HỌC BÀI</h2>
               </div>
 
               <p className="text-gray-600 mt-2">
@@ -67,8 +67,8 @@ const Application = () => {
           <div className=" bg-gray flex flex-col-reverse md:flex-row bg-gray-100 p-6 rounded-lg shadow-lg gap-[1rem]">
             <div className="flex-1  ">
               <div className="flex items-center gap-[0.5rem]  ">
-                <img src="feature/product3.png" alt="5 Phút Thuộc Bài" className="w-[2rem] h-[2rem] object-cover rounded-t-lg" />{" "}
-                <h2 className="text-xl font-bold text-blue-600">5 PHÚT HỌC BÀI</h2>
+                <img src="feature/product3.png" alt="5 Phút Thuộc Bài" className="md:w-[2rem] md:h-[2rem] w-[1.5rem] h-[1.5rem]  object-cover rounded-t-lg" />{" "}
+                <h2 className="md:text-xl text-md font-bold text-[#259BD4]">5 PHÚT HỌC BÀI</h2>
               </div>
 
               <p className="text-gray-600 mt-2">

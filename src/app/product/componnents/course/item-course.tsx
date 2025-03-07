@@ -3,9 +3,9 @@ export default function ItemCourse({ isTime = false, isReverse = false, src, pri
     <div className="w-full lg:w-1/2 p-4 h-full ">
       <div className="h-full">
         <div>
-          <div className="md:text-[0.875rem] text-[0.75rem]">🔰 KHAI GIẢNG: 19H00 ngày 05 hằng tháng.</div>
-          <div className="md:text-2xl text-[1.125rem] font-bold mb-4 mt-2">HÀNH TRÌNH ƯƠM MẦM HIỀN TÀI</div>
-          <div className="space-y-4 md:text-[0.875rem] text-[0.75rem] ">
+          <div className="md:text-[0.875rem] text-[0.85rem]">🔰 KHAI GIẢNG: 19H00 ngày 05 hằng tháng.</div>
+          <div className="md:text-2xl md:text-[1.125rem] text-[1rem] font-bold mb-4 mt-2">HÀNH TRÌNH ƯƠM MẦM HIỀN TÀI</div>
+          <div className="space-y-4 md:text-[0.875rem] text-[0.85rem] ">
             <div className="flex items-start gap-2">
               <img src="icons/check.png" className="w-[1.25rem] h-[1.25rem] mt-1" />
               <div>Giúp con học nhẹ nhàng, hiểu và nhớ dễ dàng các môn học ở trường mỗi ngày với ứng dụng 5’ Thuộc Bài.</div>
@@ -30,10 +30,10 @@ export default function ItemCourse({ isTime = false, isReverse = false, src, pri
                 <p style={{ textDecoration: "line-through", color: "gray" }}> {price} </p>
                 <p className="text-red-500"> {price} </p>
               </div>
-              <button className="text-white bg-blue-500 px-4 py-2 rounded-lg cursor-pointer text-[0.75rem] lg:text-[0.875rem]">Thêm vào giỏ hàng</button>
+              <button className="text-white bg-blue-500 px-4 py-2 rounded-lg cursor-pointer text-[0.85rem] lg:text-[0.875rem]">Thêm vào giỏ hàng</button>
             </div>
           ) : (
-            <button className="text-white bg-blue-500 px-4 py-2 rounded-lg cursor-pointer text-[0.75rem] lg:text-[0.875rem]">Tìm hiểu thêm</button>
+            <button className="text-white bg-blue-500 px-4 py-2 rounded-lg cursor-pointer text-[0.85rem] lg:text-[0.875rem]">Tìm hiểu thêm</button>
           )}
         </div>
       </div>
@@ -47,7 +47,7 @@ export default function ItemCourse({ isTime = false, isReverse = false, src, pri
   );
 
   return (
-    <div className="flex flex-col lg:flex-row w-full h-full relative mb-[2.5rem]  ">
+    <div className="flex flex-col lg:flex-row w-full h-full relative md:mb-[2.5rem]  mb-[1rem] ">
       <div className="block lg:hidden bg-linear p-[1rem] ">
         <Image />
         <Content />

@@ -6,7 +6,7 @@ import Student from "@/app/home/components/student/Student";
 import Teacher from "@/app/home/components/teacher/Teacher";
 import Share from "@/app/home/components/share/share";
 import News from "@/app/home/components/news/news";
-export default function Home() {
+export default function HomePage() {
   return (
     <div className="">
       <Banner />

@@ -16,12 +16,12 @@ const ItemShare = (data: ItemShareProps) => {
         <img src={data.avatar} alt="Avatar" className="w-12 h-12 rounded-full" />
         <div>
           <p className="font-semibold text-sm">{data.name}</p>
-          <p className="text-xs text-blue-600">{data.title}</p>
+          <p className="text-xs text-[#259BD4]">{data.title}</p>
         </div>
       </div>
 
       {/* Nội dung */}
-      <p className="text-sm text-gray-700 mt-3">{data.comment}</p>
+      <p className="text-sm text-gray-700 mt-3 line-clamp-2 ">{data.comment}</p>
 
       {/* Nút "Xem thêm" */}
       {data.isSeeMore && (

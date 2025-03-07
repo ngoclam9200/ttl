@@ -6,11 +6,74 @@ import "slick-carousel/slick/slick-theme.css";
 import React, { useState } from "react";
 import ItemShare from "@/componnents/item-share";
 import CustomArrow from "@/componnents/custom-arrow-slider";
-
+interface ItemShareProps {
+  name: string;
+  title: string;
+  avatar: string;
+  comment: string;
+  isSeeMore: boolean;
+}
 export default function Share() {
- 
-
   const [activeIndex, setActiveIndex] = useState(0);
+  const testimonials: ItemShareProps[] = [
+    {
+      name: "Chị Vyna Oanh Nguyễn",
+      title: "Giáo viên tại Bang Texas, Hoa Kỳ",
+      avatar: "feature/avt.png",
+      comment:
+        "Em xin gửi lời BIẾT ƠN chân thành đến Thầy Nguyễn Phùng Phong – một người thầy HIỀN TRIẾT nhất của gia đình em. Biết ơn Vũ trụ đã cho em được biết đến Thầy, được “học và hành” để trở thành Cha Mẹ...",
+      isSeeMore: false,
+    },
+    {
+      name: "Trần Dương Quốc Bảo",
+      title: "Outliers",
+      avatar: "feature/avt.png",
+      comment:
+        "Con rất biết ơn thầy Nguyễn Phùng Phong đã đồng hành và huấn luyện để con thay đổi theo hướng tích cực nhất. Con rất cảm ơn những thầy cô của Tâm Trí Lực đã tận tình hỗ trợ con cũng như những Outliers...",
+      isSeeMore: false,
+    },
+    {
+      name: "Trần Dương Quốc Bảo",
+      title: "Outliers",
+      avatar: "feature/avt.png",
+      comment:
+        "Con rất biết ơn thầy Nguyễn Phùng Phong đã đồng hành và huấn luyện để con thay đổi theo hướng tích cực nhất. Con rất cảm ơn những thầy cô của Tâm Trí Lực đã tận tình hỗ trợ con cũng như những Outliers...",
+      isSeeMore: false,
+    },
+    {
+      name: "Chị Vyna Oanh Nguyễn",
+      title: "Giáo viên tại Bang Texas, Hoa Kỳ",
+      avatar: "feature/avt.png",
+      comment:
+        "Em xin gửi lời BIẾT ƠN chân thành đến Thầy Nguyễn Phùng Phong – một người thầy HIỀN TRIẾT nhất của gia đình em. Biết ơn Vũ trụ đã cho em được biết đến Thầy, được “học và hành” để trở thành Cha Mẹ...",
+      isSeeMore: false,
+    },
+    {
+      name: "Trần Dương Quốc Bảo",
+      title: "Outliers",
+      avatar: "feature/avt.png",
+      comment:
+        "Con rất biết ơn thầy Nguyễn Phùng Phong đã đồng hành và huấn luyện để con thay đổi theo hướng tích cực nhất. Con rất cảm ơn những thầy cô của Tâm Trí Lực đã tận tình hỗ trợ con cũng như những Outliers...",
+      isSeeMore: false,
+    },
+    {
+      name: "Trần Dương Quốc Bảo",
+      title: "Outliers",
+      avatar: "feature/avt.png",
+      comment:
+        "Con rất biết ơn thầy Nguyễn Phùng Phong đã đồng hành và huấn luyện để con thay đổi theo hướng tích cực nhất. Con rất cảm ơn những thầy cô của Tâm Trí Lực đã tận tình hỗ trợ con cũng như những Outliers...",
+      isSeeMore: false,
+    },
+    {
+      name: "Trần Dương Quốc Bảo",
+      title: "Outliers",
+      avatar: "feature/avt.png",
+      comment:
+        "Con rất biết ơn thầy Nguyễn Phùng Phong đã đồng hành và huấn luyện để con thay đổi theo hướng tích cực nhất. Con rất cảm ơn những thầy cô của Tâm Trí Lực đã tận tình hỗ trợ con cũng như những Outliers...",
+      isSeeMore: false,
+    },
+  ];
+
   const settings = {
     dots: true,
     infinite: true,
@@ -46,34 +109,18 @@ export default function Share() {
   };
 
   return (
-    <div className="bg-linear w-full flex flex-col py-[2rem] gap-[2rem]">
-      <div className="w-full flex flex-col items-left gap-[1.5rem] justify-left m-auto grid-container">
+    <div className="bg-linear w-full flex flex-col py-[2rem] md:gap-[2rem] gap-[1rem] mt-[2rem]">
+      <div className="w-full flex flex-col items-left md:gap-[1.5rem] gap-[1rem] justify-left m-auto grid-container">
         <Headline title="Cảm nhận" src="icons/star.svg" titleHeading="Chia sẻ của Phụ huynh - Outliers" />
       </div>
 
       <div className="w-full pt-[0rem] m-auto grid-container">
         <Slider {...settings}>
-          <div className="p-[0.5rem]">
-            <ItemShare />
-          </div>
-          <div className="p-[0.5rem]">
-            <ItemShare />
-          </div>
-          <div className="p-[0.5rem]">
-            <ItemShare />
-          </div>
-          <div className="p-[0.5rem]">
-            <ItemShare />
-          </div>
-          <div className="p-[0.5rem]">
-            <ItemShare />
-          </div>
-          <div className="p-[0.5rem]">
-            <ItemShare />
-          </div>
-          <div className="p-[0.5rem]">
-            <ItemShare />
-          </div>
+          {testimonials.map((item, index) => (
+            <div key={index} className="p-[0.5rem]">
+              <ItemShare {...item} />
+            </div>
+          ))}
         </Slider>
       </div>
     </div>

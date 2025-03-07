@@ -13,8 +13,8 @@ export default function FeatureVideo() {
   ];
 
   return (
-    <div className="w-full flex flex-col mx-auto pt-[2rem] gap-[2rem]">
-      <div className="w-full flex flex-col md:items-center md:justify-center gap-[1rem] md:gap-[1.5rem]   grid-container mx-auto">
+    <div className="w-full flex flex-col mx-auto pt-[2rem] md:gap-[2rem] gap-[1rem]">
+      <div className="w-full flex flex-col md:items-center md:justify-center gap-[1rem] md:md:gap-[1.5rem] gap-[1rem]   grid-container mx-auto">
         <Headline title="Thành tựu" src="icons/feature.png" titleHeading="Thành tựu nổi bật của chúng tôi" />
 
         <div className="grid grid-cols-2 lg:grid-cols-4 md:gap-6 gap-[1rem] w-full">
