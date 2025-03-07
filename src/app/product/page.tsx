@@ -1,6 +1,9 @@
+import AllProduct from "./componnents/all-product/all-product";
 import Application from "./componnents/application/application";
 import HitaGameSection from "./componnents/banner/banner";
+import Testimonials from "./componnents/comment/comment";
 import Course from "./componnents/course/course";
+import VideoPlaylist from "./componnents/other/other";
 
 export default function ProductPage() {
   return (
@@ -8,20 +11,10 @@ export default function ProductPage() {
       <HitaGameSection />
       <Application />
       <Course />
-      {/* <div className="mt-30">
-      </div>
-      <div className="mt-30">
-  
-      </div>
-      <div className="mt-30">
-        <AllProduct />
-      </div>
-      <div className="mt-30">
-        <VideoPlaylist />
-      </div>
-      <div className="mt-30">
-        <Testimonials/>
-      </div> */}
+      {/* <AllProduct /> */}
+      <VideoPlaylist />
+      <Testimonials />
+    
     </div>
   );
 }

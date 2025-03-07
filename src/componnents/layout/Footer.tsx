@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-white text-gray-700  border-top w-full mx-auto grid-container" >
+    <footer className="bg-white text-gray-700  border-top w-full mx-auto grid-container mt-[2rem]" >
       <div className="container mx-auto   grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Logo & Contact */}
         <div>
@@ -73,31 +73,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* <div className="border-t mt-6 pt-4">
-        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-6">
-          <p className="text-sm">Copyright © 2025 Tam Tri Luc.</p>
-          <div className="flex space-x-4 text-sm">
-            <a href="#" className="hover:text-blue-500">
-              English
-            </a>
-            <a href="#" className="hover:text-blue-500">
-              Privacy
-            </a>
-            <a href="#" className="hover:text-blue-500">
-              Legal
-            </a>
-          </div>
-          <div className="flex space-x-3">
-            <img className="w-6" src="social-icons1.svg" alt="Social" />
-            <img className="w-6" src="social-icons2.svg" alt="Social" />
-            <img className="w-6" src="social-icons3.svg" alt="Social" />
-          </div>
-        </div>
-      </div> */}
-
-      {/* <div className="fixed bottom-4 right-4 bg-blue-500 p-3 rounded-full shadow-lg">
-        <img className="w-6" src="cart-icon1.svg" alt="Cart" />
-      </div> */}
+     
     </footer>
   );
 }
