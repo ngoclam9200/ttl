@@ -78,6 +78,7 @@ export default function Banner({ data }: BannerProps) {
           {partners.map((src, index) => (
             <img
               src={src}
+              key={index}
               className="w-full h-[4.25rem] object-contain"
               alt="Partner logo"
             />

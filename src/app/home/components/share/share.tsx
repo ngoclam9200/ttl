@@ -6,14 +6,16 @@ import "slick-carousel/slick/slick-theme.css";
 import React, { useState } from "react";
 import ItemShare from "@/componnents/item-share";
 import CustomArrow from "@/componnents/custom-arrow-slider";
-
-export default function Share() {
- 
+interface BannerProps {
+  data: { [key: string]: any };
+}
+export default function Share({ data }: BannerProps) {
+ const shares: any[] = data['share'] ? JSON.parse(data['share']) : [] 
 
   const [activeIndex, setActiveIndex] = useState(0);
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: shares.length > 6 ? true : false,
     speed: 500,
     slidesPerRow: 3,
     slidesToScroll: 1,
@@ -36,6 +38,7 @@ export default function Share() {
       {
         breakpoint: 768,
         settings: {
+          infinite: shares.length > 6 ? true : false,
           slidesPerRow: 1,
           slidesToShow: 1,
           arrows: false,
@@ -53,27 +56,15 @@ export default function Share() {
 
       <div className="w-full pt-[0rem] m-auto grid-container">
         <Slider {...settings}>
-          <div className="p-[0.5rem]">
-            <ItemShare />
-          </div>
-          <div className="p-[0.5rem]">
-            <ItemShare />
-          </div>
-          <div className="p-[0.5rem]">
-            <ItemShare />
-          </div>
-          <div className="p-[0.5rem]">
-            <ItemShare />
-          </div>
-          <div className="p-[0.5rem]">
-            <ItemShare />
-          </div>
-          <div className="p-[0.5rem]">
-            <ItemShare />
-          </div>
-          <div className="p-[0.5rem]">
-            <ItemShare />
-          </div>
+          {
+            shares.map((item, index)=>(
+              <div className="p-[0.5rem]">
+              <ItemShare user={item.user} content={item.content}/>
+            </div>
+            ))
+          }
+        
+         
         </Slider>
       </div>
     </div>
