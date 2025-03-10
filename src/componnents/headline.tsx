@@ -1,4 +1,12 @@
-export default function Headline({ title, src, titleHeading }: { title: string; src: string; titleHeading: string }) {
+export default function Headline({
+  title,
+  src,
+  titleHeading,
+}: {
+  title: string;
+  src: string;
+  titleHeading: string;
+}) {
   return (
     <>
       <div
@@ -8,7 +16,9 @@ export default function Headline({ title, src, titleHeading }: { title: string; 
         <img className="w-[1.25rem]" src={src} alt="icon" />
         <div className="text-[0.875rem]">{title}</div>
       </div>
-      <h2 className=" text-[1.25rem] md:md:text-[2rem] text-[1.5rem] font-bold md:mx-0 mx-3">{titleHeading}</h2>
+      <h2 className=" text-[1.25rem] md:md:text-[2rem] text-[1.5rem] font-bold md:mx-0 mx-3">
+        {titleHeading}
+      </h2>
     </>
   );
 }

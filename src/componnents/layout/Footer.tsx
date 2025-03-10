@@ -5,8 +5,14 @@ export default function Footer() {
         {/* Logo & Contact */}
         <div>
           <div className="flex space-x-3 flex-col gap-2 md:border-0 border-b border-gray-300 pb-4">
-            <img className="w-[150px] h-[50px]" src="feature/Logo.png" alt="Logo" />
-            <h2 className="md:text-[1.125rem] text-[1rem] font-semibold">CÔNG TY CỔ PHẦN ĐÀO TẠO TÂM TRÍ LỰC</h2>
+            <img
+              className="w-[150px] h-[50px]"
+              src="feature/Logo.png"
+              alt="Logo"
+            />
+            <h2 className="md:text-[1.125rem] text-[1rem] font-semibold">
+              CÔNG TY CỔ PHẦN ĐÀO TẠO TÂM TRÍ LỰC
+            </h2>
           </div>
           <div className="mt-4 space-y-3">
             <div className="flex items-center space-x-2">
@@ -18,11 +24,16 @@ export default function Footer() {
               <p className="text-sm font-bold">cskh@tamtriluc.com</p>
             </div>
             <div className="flex items-start space-x-2">
-              <img className="w-5 mt-1" src="icons/location.png" alt="Location" />
+              <img
+                className="w-5 mt-1"
+                src="icons/location.png"
+                alt="Location"
+              />
               <p className="text-sm font-bold">
                 MST: 0314866590 (cấp 29/01/2018, Sở KHĐT TP HCM)
                 <br />
-                G06 toà Canary, Đảo Kim Cương, P. Bình Trưng Tây, TP. Thủ Đức, TP.HCM
+                G06 toà Canary, Đảo Kim Cương, P. Bình Trưng Tây, TP. Thủ Đức,
+                TP.HCM
               </p>
             </div>
           </div>
@@ -30,7 +41,9 @@ export default function Footer() {
 
         {/* Information Links */}
         <div>
-          <h3 className="font-semibold md:text-[1.125rem] text-[1rem] mb-4">THÔNG TIN</h3>
+          <h3 className="font-semibold md:text-[1.125rem] text-[1rem] mb-4">
+            THÔNG TIN
+          </h3>
           <ul className="space-y-2 text-sm">
             <li className="flex items-center space-x-2">
               <a href="#" className="hover:text-blue-500">
@@ -68,7 +81,9 @@ export default function Footer() {
 
         {/* Contact & Social Media */}
         <div>
-          <h3 className="font-semibold md:text-[1.125rem] text-[1rem] mb-4">LIÊN HỆ</h3>
+          <h3 className="font-semibold md:text-[1.125rem] text-[1rem] mb-4">
+            LIÊN HỆ
+          </h3>
           <img className="w-full" src="banner.png" alt="Contact" />
         </div>
       </div>

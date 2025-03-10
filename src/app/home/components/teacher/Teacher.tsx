@@ -23,11 +23,15 @@ export default function Student() {
     beforeChange: (oldIndex: any, newIndex: any) => setActiveIndex(newIndex),
     appendDots: (dots: any) => (
       <div className="flex justify-center">
-        <ul className="flex items-center justify-center px-[0.375rem] py-[0.5rem] rounded-[1rem]">{dots}</ul>
+        <ul className="flex items-center justify-center px-[0.375rem] py-[0.5rem] rounded-[1rem]">
+          {dots}
+        </ul>
       </div>
     ),
     customPaging: (i: any) => (
-      <div className={`transition-all duration-300 ${i === activeIndex ? "w-[1.5rem] bg-blue-500 h-[0.5rem] rounded-md" : "w-[0.5rem] bg-gray-300 h-[0.5rem] rounded-full"}`} />
+      <div
+        className={`transition-all duration-300 ${i === activeIndex ? "w-[1.5rem] bg-blue-500 h-[0.5rem] rounded-md" : "w-[0.5rem] bg-gray-300 h-[0.5rem] rounded-full"}`}
+      />
     ),
     responsive: [
       {
@@ -43,10 +47,17 @@ export default function Student() {
   return (
     <div className="  w-full flex flex-col   md:gap-[2.5rem] md:gap-[1.5rem] gap-[1rem] py-[2rem] mt-[2rem]">
       <div className="w-full flex flex-col   md:items-center md:justify-center md:md:gap-[1.5rem] gap-[1rem]  gap-[1rem]     mx-auto grid-container">
-        <Headline title=" Đội ngũ " src="icons/ic_person.svg" titleHeading="Đội ngũ giảng viên" />
+        <Headline
+          title=" Đội ngũ "
+          src="icons/ic_person.svg"
+          titleHeading="Đội ngũ giảng viên"
+        />
       </div>
 
-      <div className="w-full grid-container pt-[0rem] mx-auto" style={{ backgroundImage: "url('bg-world.png')" }}>
+      <div
+        className="w-full grid-container pt-[0rem] mx-auto"
+        style={{ backgroundImage: "url('bg-world.png')" }}
+      >
         <Slider {...settings} className="flex gap-x-4">
           <div className="px-[0.5rem]">
             <ItemPerson src="teacher.png" />

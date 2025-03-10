@@ -113,7 +113,11 @@ const AllProduct = () => {
     <>
       <div className="  w-full flex flex-col py-[2rem] py:[1rem] md:gap-[2rem] gap-[1rem] bg-gray ">
         <div className=" w-full flex flex-col items-left md:items-center md:justify-center md:md:gap-[1.5rem] gap-[1rem]  gap-[1rem]  ">
-          <Headline title="Danh mục sản phẩm" src="icons/app.png" titleHeading="Tất cả sản phẩm của chúng tôi" />
+          <Headline
+            title="Danh mục sản phẩm"
+            src="icons/app.png"
+            titleHeading="Tất cả sản phẩm của chúng tôi"
+          />
         </div>
         <div className="  mx-auto w-full">
           <SearchFilter />
@@ -126,7 +130,9 @@ const AllProduct = () => {
           </div>
         </div>
         <div className="flex justify-center mt-4">
-          <span className="text-center text-[#259bd4] text-base font-medium mr-2">Xem thêm sản phẩm</span>
+          <span className="text-center text-[#259bd4] text-base font-medium mr-2">
+            Xem thêm sản phẩm
+          </span>
           <img src="icons/arrow-right.png" />
         </div>
       </div>

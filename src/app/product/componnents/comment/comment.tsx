@@ -27,25 +27,29 @@ const testimonials: ItemShareProps[] = [
     name: "Guillermo Rauch",
     title: "CEO, Vercel",
     avatar: "guillermo.jpeg.png",
-    comment: "Mintlify is amazing for us! Even as a small team we struggled to keep up with dev and update the docs on changes.",
+    comment:
+      "Mintlify is amazing for us! Even as a small team we struggled to keep up with dev and update the docs on changes.",
   },
   {
     name: "Guillermo Rauch",
     title: "CEO, Vercel",
     avatar: "guillermo.jpeg.png",
-    comment: "Why spend a week coding your own documentation when Mintlify brings you the best in docs?",
+    comment:
+      "Why spend a week coding your own documentation when Mintlify brings you the best in docs?",
   },
   {
     name: "Guillermo Rauch",
     title: "CEO, Vercel",
     avatar: "guillermo.jpeg.png",
-    comment: "Why spend a week coding your own documentation when Mintlify brings you the best in docs?",
+    comment:
+      "Why spend a week coding your own documentation when Mintlify brings you the best in docs?",
   },
   {
     name: "Guillermo Rauch",
     title: "CEO, Vercel",
     avatar: "guillermo.jpeg.png",
-    comment: "Why spend a week coding your own documentation when Mintlify brings you the best in docs?",
+    comment:
+      "Why spend a week coding your own documentation when Mintlify brings you the best in docs?",
   },
 ];
 
@@ -64,7 +68,9 @@ const Testimonials = () => {
   return (
     <section className="w-full flex flex-col py-[2rem] py:[1rem] md:gap-[2rem] gap-[1rem]    grid-container mx-auto">
       <div className=" ">
-        <h2 className="md:text-center   text-2xl lg:text-3xl font-bold text-gray-800 md:mb-8 mb-2">Nhận xét của khách hàng</h2>
+        <h2 className="md:text-center   text-2xl lg:text-3xl font-bold text-gray-800 md:mb-8 mb-2">
+          Nhận xét của khách hàng
+        </h2>
 
         <div className="hidden sm:flex  overflow-x-auto gap-6  sm:grid sm:grid-cols-2 lg:grid-cols-3   pb-2">
           {testimonials.map((testimonial, index) => (

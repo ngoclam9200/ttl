@@ -46,13 +46,19 @@ const VideoPlaylist = () => {
   return (
     <div className="  w-full flex flex-col py-[2rem] py:[1rem] md:gap-[2rem] gap-[1rem] bg-linear ">
       <div className=" w-full flex flex-col items-left md:items-center md:justify-center md:md:gap-[1.5rem] gap-[1rem]  gap-[1rem]  mx-auto grid-container">
-        <Headline title="Bức tường tình yêu" src="icons/heart.png" titleHeading="Những câu chuyện thành công!" />
+        <Headline
+          title="Bức tường tình yêu"
+          src="icons/heart.png"
+          titleHeading="Những câu chuyện thành công!"
+        />
       </div>
 
       <div className="w-full flex flex-col items-center md:gap-[1.5rem] gap-[1rem] justify-center mx-auto grid-container">
         <div className="flex flex-col-reverse md:flex-row w-full px-6 gap-6">
           <div className="w-full md:w-4/12">
-            <h3 className="text-lg font-bold text-gray-950 mb-3">Danh sách phát: {videos.length} Videos</h3>
+            <h3 className="text-lg font-bold text-gray-950 mb-3">
+              Danh sách phát: {videos.length} Videos
+            </h3>
             <div className="flex flex-row md:flex-col space-y-0 md:space-y-3 overflow-x-auto md:overflow-x-visible flex-nowrap scrollbar-hide">
               {videos.map((video) => (
                 <div
@@ -61,10 +67,18 @@ const VideoPlaylist = () => {
                   onClick={() => setSelectedVideo(video.videoUrl)}
                 >
                   <div className="relative w-16 h-10">
-                    <img src={video.thumbnail} alt={video.title} className="w-full h-full rounded-md object-cover" />
-                    <span className="absolute bottom-1 right-1 bg-black text-white text-xs px-1 rounded">{video.duration}</span>
+                    <img
+                      src={video.thumbnail}
+                      alt={video.title}
+                      className="w-full h-full rounded-md object-cover"
+                    />
+                    <span className="absolute bottom-1 right-1 bg-black text-white text-xs px-1 rounded">
+                      {video.duration}
+                    </span>
                   </div>
-                  <p className="md:block hidden text-sm text-gray-700 truncate">{video.title}</p>
+                  <p className="md:block hidden text-sm text-gray-700 truncate">
+                    {video.title}
+                  </p>
                 </div>
               ))}
             </div>
@@ -72,7 +86,13 @@ const VideoPlaylist = () => {
 
           <div className="w-full md:w-8/12">
             <div className="relative w-full aspect-video rounded-lg overflow-hidden">
-              <iframe className="absolute top-0 left-0 w-full h-full" src={selectedVideo} title="YouTube Video Player" frameBorder="0" allowFullScreen></iframe>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src={selectedVideo}
+                title="YouTube Video Player"
+                frameBorder="0"
+                allowFullScreen
+              ></iframe>
             </div>
           </div>
         </div>

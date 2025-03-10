@@ -13,7 +13,11 @@ const ItemShare = (data: ItemShareProps) => {
     <div className="bg-white rounded-xl shadow-md p-4 sm:min-w-auto min-w-[100%]">
       {/* Header */}
       <div className="flex items-center space-x-3">
-        <img src={data.avatar} alt="Avatar" className="w-12 h-12 rounded-full" />
+        <img
+          src={data.avatar}
+          alt="Avatar"
+          className="w-12 h-12 rounded-full"
+        />
         <div>
           <p className="font-semibold text-sm">{data.name}</p>
           <p className="text-xs text-[#259BD4]">{data.title}</p>

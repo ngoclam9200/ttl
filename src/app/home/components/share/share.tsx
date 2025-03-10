@@ -89,11 +89,15 @@ export default function Share() {
     beforeChange: (oldIndex: any, newIndex: any) => setActiveIndex(newIndex),
     appendDots: (dots: any) => (
       <div className="flex justify-center">
-        <ul className="flex items-center justify-center px-[0.375rem] py-[0.5rem] rounded-[1rem]">{dots}</ul>
+        <ul className="flex items-center justify-center px-[0.375rem] py-[0.5rem] rounded-[1rem]">
+          {dots}
+        </ul>
       </div>
     ),
     customPaging: (i: any) => (
-      <div className={`transition-all duration-300 ${i === activeIndex ? "w-[1.5rem] bg-blue-500 h-[0.5rem] rounded-md" : "w-[0.5rem] bg-gray-300 h-[0.5rem] rounded-full"}`} />
+      <div
+        className={`transition-all duration-300 ${i === activeIndex ? "w-[1.5rem] bg-blue-500 h-[0.5rem] rounded-md" : "w-[0.5rem] bg-gray-300 h-[0.5rem] rounded-full"}`}
+      />
     ),
     responsive: [
       {
@@ -111,7 +115,11 @@ export default function Share() {
   return (
     <div className="bg-linear w-full flex flex-col py-[2rem] md:gap-[2rem] gap-[1rem] mt-[2rem]">
       <div className="w-full flex flex-col items-left md:gap-[1.5rem] gap-[1rem] justify-left m-auto grid-container">
-        <Headline title="Cảm nhận" src="icons/star.svg" titleHeading="Chia sẻ của Phụ huynh - Outliers" />
+        <Headline
+          title="Cảm nhận"
+          src="icons/star.svg"
+          titleHeading="Chia sẻ của Phụ huynh - Outliers"
+        />
       </div>
 
       <div className="w-full pt-[0rem] m-auto grid-container">

@@ -14,7 +14,6 @@ export default function ProductPage() {
       {/* <AllProduct /> */}
       <VideoPlaylist />
       <Testimonials />
-    
     </div>
   );
 }
