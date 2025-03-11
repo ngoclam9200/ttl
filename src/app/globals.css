@@ -52,30 +52,26 @@ body {
 }
 
 body .grid-container {
-    max-width: 1190px;
-    padding-left: 0.625rem;
-    padding-right: 0.625rem;
-    /* min-width: 400px; */
+  max-width: 1190px;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  /* min-width: 400px; */
 }
 
 @media (max-width: 768px) {
-  body .banner.grid-container{
+  body .banner.grid-container {
     padding: 0;
   }
-  .banner img{
+  .banner img {
     border-radius: 0;
   }
 }
 
-.scrollbar-hide{
-  -ms-overflow-style: none;   
-  scrollbar-width: none;      
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;             
+  display: none;
 }
-
-
-
- 

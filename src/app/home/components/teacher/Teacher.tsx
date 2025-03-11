@@ -22,8 +22,8 @@ export default function Student({ data }: BannerProps) {
     autoplay: true,
     autoplaySpeed: 6000,
     arrows: true,
-    nextArrow: <CustomArrow direction="next" />,
-    prevArrow: <CustomArrow direction="prev" />,
+    nextArrow: <CustomArrow direction="next" position="0.5rem" />,
+    prevArrow: <CustomArrow direction="prev" position="0.5rem" />,
     beforeChange: (oldIndex: any, newIndex: any) => setActiveIndex(newIndex),
     appendDots: (dots: any) => (
       <div className="flex justify-center">
@@ -34,11 +34,7 @@ export default function Student({ data }: BannerProps) {
     ),
     customPaging: (i: any) => (
       <div
-        className={`transition-all duration-300 ${
-          i === activeIndex
-            ? "w-[1.5rem] bg-blue-500 h-[0.5rem] rounded-md"
-            : "w-[0.5rem] bg-gray-300 h-[0.5rem] rounded-full"
-        }`}
+        className={`transition-all duration-300 ${i === activeIndex ? "w-[1.5rem] bg-blue-500 h-[0.5rem] rounded-md" : "w-[0.5rem] bg-gray-300 h-[0.5rem] rounded-full"}`}
       />
     ),
     responsive: [
@@ -53,8 +49,8 @@ export default function Student({ data }: BannerProps) {
   };
 
   return (
-    <div className="bg-linear w-full flex flex-col pt-[2rem] md:gap-[2.5rem] gap-[1.5rem]">
-      <div className="w-full flex flex-col   md:items-center md:justify-center md:gap-[1.5rem]  gap-[1rem]     mx-auto grid-container">
+    <div className="  w-full flex flex-col   md:gap-[2.5rem] md:gap-[1.5rem] gap-[1rem] py-[2rem] mt-[2rem]">
+      <div className="w-full flex flex-col   md:items-center md:justify-center md:md:gap-[1.5rem] gap-[1rem]  gap-[1rem]     mx-auto grid-container">
         <Headline
           title=" Đội ngũ "
           src="icons/ic_person.svg"

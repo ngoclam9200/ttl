@@ -11,7 +11,15 @@ interface Product {
   discounted_price: number;
   image: string;
 }
-const ProductCard = ({ title, category, price, discounted_price, discount, rating, image }: Product) => {
+const ProductCard = ({
+  title,
+  category,
+  price,
+  discounted_price,
+  discount,
+  rating,
+  image,
+}: Product) => {
   return (
     <div className="bg-white rounded-lg overflow-hidden shawdow-md">
       <div className="relative">
@@ -21,7 +29,11 @@ const ProductCard = ({ title, category, price, discounted_price, discount, ratin
             GIẢM GIÁ
           </span>
         )}
-        <img src={image} alt={title} className="w-full h-[128px] lg:h-[180px]   rounded-t-lg" />
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-[128px] lg:h-[180px]   rounded-t-lg"
+        />
       </div>
       <div className="p-4">
         <div className="flex justify-between">
@@ -35,8 +47,16 @@ const ProductCard = ({ title, category, price, discounted_price, discount, ratin
         <h3 className="text-[#001416] text-[1rem] mt-1">{title}</h3>
 
         <div className="flex items-center mt-2 gap-2">
-          {discounted_price > 0 && <p className="text-[1rem] lg:text-[1.25rem] font-bold text-gray-400 line-through">{discounted_price.toLocaleString()} đ</p>}
-          <p className={`text-[#001416] text-[1rem] lg:text-[1.25rem] font-bold ${discounted_price > 0 ? "text-red-600" : ""}`}>{price.toLocaleString()} đ</p>
+          {discounted_price > 0 && (
+            <p className="text-[1rem] lg:text-[1.25rem] font-bold text-gray-400 line-through">
+              {discounted_price.toLocaleString()} đ
+            </p>
+          )}
+          <p
+            className={`text-[#001416] text-[1rem] lg:text-[1.25rem] font-bold ${discounted_price > 0 ? "text-red-600" : ""}`}
+          >
+            {price.toLocaleString()} đ
+          </p>
         </div>
       </div>
     </div>

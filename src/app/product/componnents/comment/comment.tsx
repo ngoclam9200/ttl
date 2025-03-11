@@ -13,7 +13,8 @@ const testimonials: ItemShareProps[] = [
     name: "Guillermo Rauch",
     title: "CEO, Vercel",
     avatar: "guillermo.jpeg.png", // Thay bằng URL avatar
-    comment: "The @mintlify team absolutely nailed combining docs search and AI Q&A in a delightful experience.",
+    comment:
+      "The @mintlify team absolutely nailed combining docs search and AI Q&A in a delightful experience.The @mintlify team absolutely nailed combining docs search and AI Q&A in a delightful experience.The @mintlify team absolutely nailed combining docs search and AI Q&A in a delightful experience.The @mintlify team absolutely nailed combining docs search and AI Q&A in a delightful experience.The @mintlify team absolutely nailed combining docs search and AI Q&A in a delightful experience.",
   },
   {
     name: "Guillermo Rauch",
@@ -26,31 +27,35 @@ const testimonials: ItemShareProps[] = [
     name: "Guillermo Rauch",
     title: "CEO, Vercel",
     avatar: "guillermo.jpeg.png",
-    comment: "Mintlify is amazing for us! Even as a small team we struggled to keep up with dev and update the docs on changes.",
+    comment:
+      "Mintlify is amazing for us! Even as a small team we struggled to keep up with dev and update the docs on changes.",
   },
   {
     name: "Guillermo Rauch",
     title: "CEO, Vercel",
     avatar: "guillermo.jpeg.png",
-    comment: "Why spend a week coding your own documentation when Mintlify brings you the best in docs?",
+    comment:
+      "Why spend a week coding your own documentation when Mintlify brings you the best in docs?",
   },
   {
     name: "Guillermo Rauch",
     title: "CEO, Vercel",
     avatar: "guillermo.jpeg.png",
-    comment: "Why spend a week coding your own documentation when Mintlify brings you the best in docs?",
+    comment:
+      "Why spend a week coding your own documentation when Mintlify brings you the best in docs?",
   },
   {
     name: "Guillermo Rauch",
     title: "CEO, Vercel",
     avatar: "guillermo.jpeg.png",
-    comment: "Why spend a week coding your own documentation when Mintlify brings you the best in docs?",
+    comment:
+      "Why spend a week coding your own documentation when Mintlify brings you the best in docs?",
   },
 ];
 
 const Testimonials = () => {
   const settings = {
-    dots: false,
+    dots: true,
     infinite: false,
     speed: 2000,
     slidesToShow: 1,
@@ -58,24 +63,29 @@ const Testimonials = () => {
     autoplay: false,
     autoplaySpeed: 6000,
     arrows: false,
+    // adaptiveHeight: false,
   };
   return (
-    <section className="w-full flex flex-col py-[2rem] gap-[2rem]    grid-container mx-auto">
+    <section className="w-full flex flex-col py-[2rem] py:[1rem] md:gap-[2rem] gap-[1rem]    grid-container mx-auto">
       <div className=" ">
-        <h2 className="lg:text-center text-2xl lg:text-3xl font-bold text-gray-800 mb-8">Nhận xét của khách hàng</h2>
+        <h2 className="md:text-center   text-2xl lg:text-3xl font-bold text-gray-800 md:mb-8 mb-2">
+          Nhận xét của khách hàng
+        </h2>
 
-        <div className="flex  overflow-x-auto gap-6  sm:grid sm:grid-cols-2 lg:grid-cols-3   pb-2">
+        <div className="hidden sm:flex  overflow-x-auto gap-6  sm:grid sm:grid-cols-2 lg:grid-cols-3   pb-2">
           {testimonials.map((testimonial, index) => (
             <ItemShare isSeeMore={false} key={index} {...testimonial} />
           ))}
         </div>
-        {/* <div className="sm:hidden   ">
-          <Slider {...settings} className="">
+        <div className="sm:hidden   ">
+          <Slider {...settings} className=" ">
             {testimonials.map((testimonial, index) => (
-              <ItemShare isSeeMore={false} key={index} {...testimonial} />
+              <div className="px-4 py-2" key={index}>
+                <ItemShare isSeeMore={false} {...testimonial} />
+              </div>
             ))}
           </Slider>
-        </div> */}
+        </div>
       </div>
     </section>
   );

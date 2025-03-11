@@ -9,9 +9,7 @@ import Student from "@/app/home/components/student/Student";
 import Teacher from "./components/teacher/Teacher";
 
 export default async function Home() {
-  const data = await getKeys(
-    "banner,partner,player,ai,student,achievements,feature_1,feature_2,feature_3,feature_4,feature_5,feature_6,event,product,best_student,teacher,share"
-  );
+  const data = await getKeys("banner,partner,player,ai,student,achievements,feature_1,feature_2,feature_3,feature_4,feature_5,feature_6,event,product,best_student,teacher,share");
   return (
     <div className="">
       <Banner data={data} />
@@ -20,7 +18,7 @@ export default async function Home() {
       <Product data={data} />
       <Student data={data} />
       <Teacher data={data} />
-      <Share data={data}/>
+      <Share data={data} />
       <News></News>
     </div>
   );

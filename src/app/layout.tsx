@@ -6,10 +6,12 @@ import Header from "@/componnents/layout/Header";
 
 export const metadata: Metadata = {
   title: "Next.js TypeScript Base",
-  description: "A well-structured Next.js 13+ base project with TypeScript and Tailwind CSS.",
+  description:
+    "A well-structured Next.js 13+ base project with TypeScript and Tailwind CSS.",
   openGraph: {
     title: "Next.js TypeScript Base",
-    description: "A well-structured Next.js 13+ base project with TypeScript and Tailwind CSS.",
+    description:
+      "A well-structured Next.js 13+ base project with TypeScript and Tailwind CSS.",
     url: "https://yourdomain.com",
     siteName: "Next.js TS Base",
     images: [
@@ -23,12 +25,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="vi">
       <body>
         <Header />
-        {/* <main className="container mx-auto p-4">{children}</main> */}
         <main className="mx-auto ">{children}</main>
         <Footer />
       </body>

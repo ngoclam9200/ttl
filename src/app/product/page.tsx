@@ -7,14 +7,13 @@ import VideoPlaylist from "./componnents/other/other";
 
 export default function ProductPage() {
   return (
-    <div className="bg-white">
+    <div className="bg-white flex gap-2 flex-col">
       <HitaGameSection />
       <Application />
       <Course />
       {/* <AllProduct /> */}
       <VideoPlaylist />
       <Testimonials />
-    
     </div>
   );
 }

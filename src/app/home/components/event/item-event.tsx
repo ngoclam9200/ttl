@@ -45,7 +45,7 @@ export default function ItemEvent({
           </div>
         </div>
         <div className="flex items-center md:justify-start justify-center text-[1rem]  gap-2 mt-4">
-          <div className="text-blue-600 px-4 py-2 rounded cursor-pointer ">
+          <div className="text-[#259BD4] px-4 py-2 rounded cursor-pointer ">
             Tìm hiểu thêm
           </div>
           <img

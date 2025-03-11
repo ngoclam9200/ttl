@@ -111,14 +111,18 @@ const AllProduct = () => {
 
   return (
     <>
-      <div className="  w-full flex flex-col py-[2rem] gap-[2rem] bg-gray ">
-        <div className=" w-full flex flex-col items-left md:items-center md:justify-center md:gap-[1.5rem]  gap-[1rem]  ">
-          <Headline title="Danh mục sản phẩm" src="icons/app.png" titleHeading="Tất cả sản phẩm của chúng tôi" />
+      <div className="  w-full flex flex-col py-[2rem] py:[1rem] md:gap-[2rem] gap-[1rem] bg-gray ">
+        <div className=" w-full flex flex-col items-left md:items-center md:justify-center md:md:gap-[1.5rem] gap-[1rem]  gap-[1rem]  ">
+          <Headline
+            title="Danh mục sản phẩm"
+            src="icons/app.png"
+            titleHeading="Tất cả sản phẩm của chúng tôi"
+          />
         </div>
         <div className="  mx-auto w-full">
           <SearchFilter />
         </div>
-        <div className="w-full flex flex-col items-center gap-[1.5rem] justify-center mx-auto grid-container">
+        <div className="w-full flex flex-col items-center md:gap-[1.5rem] gap-[1rem] justify-center mx-auto grid-container">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 lg:gap-6">
             {sampleProducts.map((product) => (
               <ProductCard key={product.id} {...product} />
@@ -126,7 +130,9 @@ const AllProduct = () => {
           </div>
         </div>
         <div className="flex justify-center mt-4">
-          <span className="text-center text-[#259bd4] text-base font-medium mr-2">Xem thêm sản phẩm</span>
+          <span className="text-center text-[#259bd4] text-base font-medium mr-2">
+            Xem thêm sản phẩm
+          </span>
           <img src="icons/arrow-right.png" />
         </div>
       </div>
