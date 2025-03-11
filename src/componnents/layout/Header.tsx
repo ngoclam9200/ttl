@@ -1,18 +1,20 @@
 "use client";
+import CartModal from "@/app/product/componnents/cart/cart";
+import { Drawer } from "antd";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpenCart, setIsOpenCart] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 120);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 120);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   const menuItems = [
     { label: "Trang chủ", href: "/", isActive: true },
     { label: "Sản phẩm", href: "/product" },
@@ -20,8 +22,6 @@ const Header = () => {
     { label: "Kiểm tra đơn hàng", href: "/order-tracking" },
     { label: "Liên hệ", href: "/contact" },
   ];
-
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header
@@ -108,7 +108,7 @@ const Header = () => {
           ))}
         </div>
       )}
-    </header>
+    </>
   );
 };
 

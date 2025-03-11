@@ -7,8 +7,14 @@ import "slick-carousel/slick/slick-theme.css";
 import React, { useState } from "react";
 import CustomArrow from "@/componnents/custom-arrow-slider";
 
-export default function Student() {
+
+interface BannerProps {
+  data: { [key: string]: any };
+}
+export default function Student({ data }: BannerProps) {
+ 
   const [activeIndex, setActiveIndex] = useState(0);
+  const students: any[] = data ? JSON.parse(data['best_student']) : []
   const settings = {
     dots: true,
     infinite: true,
@@ -64,27 +70,13 @@ export default function Student() {
         </div>
 
         <Slider {...settings} className="flex gap-x-4">
-          <div className="px-[0.5rem]">
-            <ItemPerson />
-          </div>
-          <div className="px-[0.5rem]">
-            <ItemPerson />
-          </div>
-          <div className="px-[0.5rem]">
-            <ItemPerson />
-          </div>
-          <div className="px-[0.5rem]">
-            <ItemPerson />
-          </div>
-          <div className="px-[0.5rem]">
-            <ItemPerson />
-          </div>
-          <div className="px-[0.5rem]">
-            <ItemPerson />
-          </div>
-          <div className="px-[0.5rem]">
-            <ItemPerson />
-          </div>
+          {
+            students.map((item, index)=>(
+              <div className="px-[0.125rem]">
+              <ItemPerson src={item.image} name={item.name} description={item.description}/>
+            </div>
+            ))
+          }
         </Slider>
       </div>
     </div>

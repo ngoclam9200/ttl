@@ -7,7 +7,11 @@ import "slick-carousel/slick/slick-theme.css";
 import React, { useState } from "react";
 import CustomArrow from "@/componnents/custom-arrow-slider";
 
-export default function Student() {
+interface BannerProps {
+  data: { [key: string]: any };
+}
+export default function Student({ data }: BannerProps) {
+  const teachers: any[] = data ? JSON.parse(data["teacher"]) : [];
   const [activeIndex, setActiveIndex] = useState(0);
   const settings = {
     dots: true,
@@ -58,28 +62,16 @@ export default function Student() {
         className="w-full grid-container pt-[0rem] mx-auto"
         style={{ backgroundImage: "url('bg-world.png')" }}
       >
+        <div className="md:text-[1rem] text-[0.875rem] text-[#6B7280] md:text-center pb-[1rem] md:pb-[1.5rem]">
+          Và bạn cũng có thể là người tiếp theo
+        </div>
+
         <Slider {...settings} className="flex gap-x-4">
-          <div className="px-[0.5rem]">
-            <ItemPerson src="teacher.png" />
-          </div>
-          <div className="px-[0.5rem]">
-            <ItemPerson src="teacher.png" />
-          </div>
-          <div className="px-[0.5rem]">
-            <ItemPerson src="teacher.png" />
-          </div>
-          <div className="px-[0.5rem]">
-            <ItemPerson src="teacher.png" />
-          </div>
-          <div className="px-[0.5rem]">
-            <ItemPerson src="teacher.png" />
-          </div>
-          <div className="px-[0.5rem]">
-            <ItemPerson src="teacher.png" />
-          </div>
-          <div className="px-[0.5rem]">
-            <ItemPerson src="teacher.png" />
-          </div>
+          {teachers.map((item, index) => (
+            <div className="px-[0.125rem]">
+              <ItemPerson src={item.image} name={item.name} description={item.description} />
+            </div>
+          ))}
         </Slider>
       </div>
     </div>

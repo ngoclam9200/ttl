@@ -1,44 +1,28 @@
 import Head from "next/head";
 import ItemFeature from "./item-feature";
 import Headline from "../../../../componnents/headline";
-
-export default function FeatureVideo() {
+interface BannerProps {
+  data: { [key: string]: any };
+}
+export default function FeatureVideo({ data }: BannerProps) {
+  const video_1 = data ? JSON.parse(data["feature_1"]) : {};
+  const video_2 = data ? JSON.parse(data["feature_2"]) : {};
+  const video_3 = data ? JSON.parse(data["feature_3"]) : {};
+  const video_4 = data ? JSON.parse(data["feature_4"]) : {};
+  const video_5 = data ? JSON.parse(data["feature_5"]) : {};
+  const video_6 = data ? JSON.parse(data["feature_6"]) : {};
   const videos = [
-    {
-      src: "https://www.youtube.com/embed/ObPxP2WNKS8",
-      title: "Kết quả bất ngờ của Hiền Tài",
-      duration: "23:45",
-    },
-    {
-      src: "https://www.youtube.com/embed/ObPxP2WNKS8",
-      title: "Kết quả bất ngờ của Hiền Tài",
-      duration: "23:45",
-    },
-    {
-      src: "https://www.youtube.com/embed/ObPxP2WNKS8",
-      title: "Kết quả bất ngờ của Hiền Tài",
-      duration: "23:45",
-    },
-    {
-      src: "https://www.youtube.com/embed/ObPxP2WNKS8",
-      title: "Kết quả bất ngờ của Hiền Tài",
-      duration: "23:45",
-    },
-    {
-      src: "https://www.youtube.com/embed/ObPxP2WNKS8",
-      title: "Kết quả bất ngờ của Hiền Tài",
-      duration: "23:45",
-    },
-    {
-      src: "https://www.youtube.com/embed/ObPxP2WNKS8",
-      title: "Kết quả bất ngờ của Hiền Tài",
-      duration: "23:45",
-    },
+    video_1,
+    video_2,
+    video_3,
+    video_4,
+    video_5,
+    video_6
   ];
 
   return (
-    <div className="w-full flex flex-col mx-auto pt-[2rem] md:gap-[2rem] gap-[1rem]">
-      <div className="w-full flex flex-col md:items-center md:justify-center gap-[1rem] md:md:gap-[1.5rem] gap-[1rem]   grid-container mx-auto">
+    <div className="w-full flex flex-col mx-auto pt-[2rem] gap-[2rem]">
+      <div className="w-full flex flex-col md:items-center md:justify-center gap-[1rem] md:gap-[1.5rem]   grid-container mx-auto">
         <Headline
           title="Thành tựu"
           src="icons/feature.png"
@@ -48,22 +32,22 @@ export default function FeatureVideo() {
         <div className="grid grid-cols-2 lg:grid-cols-4 md:gap-6 gap-[1rem] w-full">
           <ItemFeature
             src="icons/player.svg"
-            value="30"
+            value={data["player"]}
             description="Tuyển thủ quốc gia"
           />
           <ItemFeature
             src="icons/brain.svg"
-            value="7"
+            value={data["ai"]}
             description="Thí sinh siêu trí tuệ"
           />
           <ItemFeature
             src="icons/education.svg"
-            value="20,000"
+            value={data["student"]}
             description=" Học viên trên khắp cả nước"
           />
           <ItemFeature
             src="icons/award.svg"
-            value="30"
+            value={data["achievements"]}
             description="Bằng khen thành tích"
           />
         </div>
@@ -100,7 +84,9 @@ export default function FeatureVideo() {
               >
                 <div className="relative w-[6.125rem] h-[3.375rem] rounded-md aspect-video overflow-hidden">
                   <img
-                    src={`https://img.youtube.com/vi/${video.src.split("/embed/")[1]}/hqdefault.jpg`}
+                    src={`https://img.youtube.com/vi/${
+                      video.src.split("/embed/")[1]
+                    }/hqdefault.jpg`}
                     alt={`Thumbnail ${index}`}
                     className="w-full h-full object-cover"
                   />

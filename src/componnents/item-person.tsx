@@ -1,7 +1,7 @@
 export default function ItemPerson({
-  src = "student1.png",
-  name = "Huỳnh Lâm Tính",
-  description = "Kỷ lục gia Siêu trí nhớ Việt Nam",
+  src,
+  name,
+  description,
 }: {
   src?: string;
   name?: string;
